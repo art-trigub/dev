@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Testnet from './components/Testnets/Testnet'
+import Node from './components/Node/Node'
+import Amba from './components/Amba/Amba'
+import SwipeToSlide from './components/HomeContent';
+import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import { Home } from '@mui/icons-material';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Routes>
+        <Route path="/" element={<SwipeToSlide />}>
+          <Route
+            path="testnet"
+            element={<Testnet />}
+          />
+          <Route path="tasks" element={<DashboardTasks />} />
+        </Route>
+        <Route path="about" element={<AboutPage />} />
+    </Routes> */}
+      <Router>
+        <Switch>
+          <Route path="/testnet">
+            <Testnet />
+          </Route>
+          <Route path="/amba">
+            <Amba />
+          </Route>
+          <Route path="/node">
+            <Node />
+          </Route>
+          <Route path="/">
+            <Header />
+            <SwipeToSlide />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
+
 
 export default App;

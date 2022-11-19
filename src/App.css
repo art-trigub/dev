@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -27,6 +27,174 @@
 .App-link {
   color: #61dafb;
 }
+
+.header__list div{
+  margin-left: 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.home__slider__wrap{
+  margin: 20px auto!important;
+  width: 840px;
+}
+
+.home__slider__container{
+  position: relative;
+  width: 720px;
+  margin: 20px auto;
+}
+
+/* .home__slider_item__container{
+  transition: 0.1s;
+} */
+
+.home__slider_item__image{
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 0 auto;
+  /* border: 1px solid #313130; */
+  background-size: cover;
+}
+
+.home__slider_item__title{
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.slick-prev:before {
+  content: '←';
+  color: #313130!important;
+  font-size: 30px!important;
+}
+
+.slick-next:before {
+  content: '>';
+  color: #313130!important;
+  border-radius: 0px!important;
+  font-size: 30px!important;
+}
+
+.slick-prev{
+  top: 40%!important;
+  left: -35px!important;
+}
+
+.slick-next{
+  top: 40%!important;
+}
+
+.home__slider__more{
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: #2F80F0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+
+.header__list{
+  width: 980px;
+}
+
+.list_container{
+  width: 1000px;
+  margin: 0 auto!important;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 1000px;
+  justify-content: space-between;
+}
+
+.list_item{
+  margin: 10px;
+  display: inline-block;
+  width: 250px;
+  height: 125px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .header__list{
+    font-size: ;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header__list{
+
+  }
+
+  .project__title{
+    display: none!important;
+  }
+
+  
+}
+
+@media screen and (max-width: 880px) {
+
+  .home__slider__wrap{
+    margin: 20px auto!important;
+    width: 640px;
+  }
+
+  .project__title{
+    display: none!important;
+
+  }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+
+@media screen and (max-width: 320px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +204,4 @@
     transform: rotate(360deg);
   }
 }
+
