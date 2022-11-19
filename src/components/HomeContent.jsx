@@ -26,6 +26,8 @@ import image19 from '../images/ObolLabs.jpg'
 import image20 from '../images/Vega.jpg'
 import image21 from '../images/Aleo.png'
 import { useEffect } from "react";
+import {Switch, Route, Link } from 'react-router-dom'
+
 
 
 export default function SwipeToSlide() {    
@@ -103,13 +105,13 @@ export default function SwipeToSlide() {
                 </div>
               </Slider>
             </div>
-            <div className="home__slider__more">Открыть все проекты</div>
+            <div className="home__slider__more"><Link to="/testnet">Открыть все проекты</Link></div>
             
           </Paper>
           <Paper elevation={5} className="home__slider__wrap">
             <h3>Амбассадорки</h3>
             <Divider />
-            <div style={{width: '720px', margin: '20px auto'}} className="home__slider__container">
+            <div className="home__slider__container">
               <Slider {...settings}>
                 <div className="home__slider_item__container">
                   <div className="home__slider_item__image" style={{backgroundImage: `url("${image1}")`}}></div>
@@ -141,7 +143,7 @@ export default function SwipeToSlide() {
                 </div>
               </Slider>
             </div>
-            <div className="home__slider__more">Открыть все проекты</div>
+            <div className="home__slider__more"><Link to="/amba">Открыть все проекты</Link></div>
           </Paper>
           <Paper elevation={5} className="home__slider__wrap">
             <h3>Ноды</h3>
@@ -178,7 +180,7 @@ export default function SwipeToSlide() {
                 </div>
               </Slider>
             </div>
-            <div className="home__slider__more">Открыть все проекты</div>
+            <div className="home__slider__more"><Link to="/node">Открыть все проекты</Link></div>
           </Paper>
         </Box>
       );

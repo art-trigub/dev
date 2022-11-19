@@ -24,6 +24,7 @@ function App() {
         <Route path="about" element={<AboutPage />} />
     </Routes> */}
       <Router>
+      <Header />
         <Switch>
           <Route path="/testnet">
             <Testnet />
@@ -35,7 +36,6 @@ function App() {
             <Node />
           </Route>
           <Route path="/">
-            <Header />
             <SwipeToSlide />
           </Route>
         </Switch>
