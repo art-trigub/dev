@@ -1,4 +1,9 @@
 import * as React from 'react';
+import {Switch, Route, Link } from 'react-router-dom'
+
+import BasicBreadcrumbs from "./custom/Breadcrumbs";
+
+
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -118,7 +123,7 @@ export default function PrimarySearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1, marginBottom: 3 }}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar> 
           <IconButton
             size="large"
             edge="start"
@@ -132,12 +137,12 @@ export default function PrimarySearchAppBar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: 'block', width: '200px'}}
+            sx={{ display: 'block', width: '500px'}}
             className='project__title'
           >
-            MAR!O research
+                        <Link to="/">MAR!O</Link>
           </Typography>
-          <Search>
+          <Search className='header_search'>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -147,13 +152,13 @@ export default function PrimarySearchAppBar() {
             />
           </Search>
           <div className='header__list' style={{display: 'flex', justifyContent: 'flex-start'}}>
-            <div>Домой</div>
-            {/* <div>Тестнеты</div>
+             <Link to="/"><div>Домой</div></Link>
+            <div>Тестнеты</div>
             <div>Амбы</div>
-            <div>Ноды</div> */}
-            <div>Полезные сервисы</div>
+            <div>Ноды</div>
+            {/* <div>Полезные сервисы</div>
             <div>О нас</div>
-            <div>Контакты</div>
+            <div>Контакты</div> */}
           </div>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
@@ -194,6 +199,7 @@ export default function PrimarySearchAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      {/* <BasicBreadcrumbs /> */}
     </Box>
   );
   

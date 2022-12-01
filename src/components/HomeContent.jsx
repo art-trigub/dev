@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import '../App.css';
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
@@ -25,8 +25,14 @@ import image18 from '../images/LayerZero.jpg'
 import image19 from '../images/ObolLabs.jpg'
 import image20 from '../images/Vega.jpg'
 import image21 from '../images/Aleo.png'
-import { useEffect } from "react";
+
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
+
+
 import {Switch, Route, Link } from 'react-router-dom'
+
+// const [value, setValue] = React.useState(2);
 
 
 
@@ -34,12 +40,24 @@ export default function SwipeToSlide() {
       // const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
       const [changeSizeScreen, setChangeSizeScreen] = React.useState()
 
+    //   useEffect(() => {
+    //     document.title = t('clients')
+    //     changeListBreadCrumbs([t('clients')])
+    // }, [t])     
+
+    useEffect(() => {
+      console.log(window.screen.width)
+  }, [window.screen.width])     
+
+
       const settings = {
         className: "center home__slider__container",
         infinite: true,
         centerPadding: "60px",
         slidesToShow: 5,
         swipeToSlide: true,
+        slidesToScroll: 1,
+        speed: 140,
         
         afterChange: function(index) {
           console.log(
@@ -70,9 +88,13 @@ export default function SwipeToSlide() {
               
 
 
-          <Paper elevation={5} className="home__slider__wrap">
+          <Paper elevation={8} className="home__slider__wrap">
+          <Divider />
+            <div className="slider_name_wrap">
+
             <h3>Тестнеты</h3>
-            <Divider />
+            <div className="home__slider__more"><Link to="/testnet">Смотреть все</Link></div>
+            </div>
             <div className="home__slider__container">
               <Slider {...settings}>
                 <div className="home__slider_item__container">
@@ -105,12 +127,14 @@ export default function SwipeToSlide() {
                 </div>
               </Slider>
             </div>
-            <div className="home__slider__more"><Link to="/testnet">Открыть все проекты</Link></div>
             
-          </Paper>
-          <Paper elevation={5} className="home__slider__wrap">
-            <h3>Амбассадорки</h3>
             <Divider />
+
+            <div className="slider_name_wrap">
+
+              <h3>Амбассадорки</h3>
+              <div className="home__slider__more"><Link to="/amba">Смотреть все</Link></div>
+            </div>
             <div className="home__slider__container">
               <Slider {...settings}>
                 <div className="home__slider_item__container">
@@ -143,11 +167,12 @@ export default function SwipeToSlide() {
                 </div>
               </Slider>
             </div>
-            <div className="home__slider__more"><Link to="/amba">Открыть все проекты</Link></div>
-          </Paper>
-          <Paper elevation={5} className="home__slider__wrap">
-            <h3>Ноды</h3>
             <Divider />
+
+            <div className="slider_name_wrap">
+              <h3>Ноды</h3>            
+              <div className="home__slider__more"><Link to="/node">Смотреть все</Link></div>
+            </div>
             <div className="home__slider__container">
               <Slider {...settings}>
                 <div className="home__slider_item__container">
@@ -180,7 +205,6 @@ export default function SwipeToSlide() {
                 </div>
               </Slider>
             </div>
-            <div className="home__slider__more"><Link to="/node">Открыть все проекты</Link></div>
           </Paper>
         </Box>
       );
