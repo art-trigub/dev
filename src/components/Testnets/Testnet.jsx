@@ -21,7 +21,7 @@ import image18 from '../../images/LayerZero.jpg'
 import image19 from '../../images/ObolLabs.jpg'
 import image20 from '../../images/Vega.jpg'
 import image21 from '../../images/Aleo.png'
-import Rating from '../custom/Rating'
+import Rating from '../Custom/Rating'
 import {Switch, Route, Link, useRouteMatch } from 'react-router-dom'
 
 
@@ -35,63 +35,78 @@ export default function Testnet() {
         
             <div className="list_container">
                 <Paper elevation={4} className="list_item">
-                    <Link to="/project"><div className="project_image" style={{backgroundImage: `url("${image1}")`}}></div></Link>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image1}")`}}></div></Link>
+                    <div className="title_project">Metaverse Magna</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image2}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image2}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image3}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image3}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image4}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image4}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image5}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image5}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image6}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image6}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image7}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image7}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image8}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image8}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image9}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image9}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image10}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image10}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image11}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image11}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image12}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image12}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image13}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image13}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image14}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image14}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
                 <Paper elevation={4} className="list_item">
-                    <div className="project_image" style={{backgroundImage: `url("${image15}")`}}></div>
+                     <Link to="/project/"><div className="project_image" style={{backgroundImage: `url("${image15}")`}}></div></Link>
+                    <div className="title_project">AAAAA</div>
                     <div className="rating_container"><Rating /></div>
                 </Paper>
             </div>

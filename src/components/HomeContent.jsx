@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import '../App.css';
-import React, { Component, useState, useEffect } from "react";
+import React, { Component, useState, useEffect, useRef  } from "react";
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
@@ -34,44 +34,49 @@ import {Switch, Route, Link } from 'react-router-dom'
 
 // const [value, setValue] = React.useState(2);
 
-
-
-export default function SwipeToSlide() {    
-      // const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-      const [changeSizeScreen, setChangeSizeScreen] = React.useState()
-
     //   useEffect(() => {
     //     document.title = t('clients')
     //     changeListBreadCrumbs([t('clients')])
     // }, [t])     
 
-    useEffect(() => {
-      console.log(window.screen.width)
-  }, [window.screen.width])     
+export default function SwipeToSlide({widthScreen}) {    
+    const [slidesToShow, setSlidesToShow] = React.useState(5)
+      const [sizeScreen, setSizeScreen] = React.useState(window.innerWidth)
 
+      
 
-      const settings = {
+      let settings = {
         className: "center home__slider__container",
         infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 5,
+        centerPadding: "60px",        
+        slidesToShow: slidesToShow,
         swipeToSlide: true,
         slidesToScroll: 1,
-        speed: 140,
-        
-        afterChange: function(index) {
-          console.log(
-            `${index + 1}`
-          );
-        },
-        widthScreen: function getSizeScreen() {
-          let widthScreen = document.documentElement.clientWidth
-          if(widthScreen < 880) settings.slidesToShow = 3
-          if(widthScreen < 600) settings.slidesToShow = 1
-        }
-      };
+        speed: 145,
+      }
+     
+    useEffect(() => {
+      window.addEventListener("resize", function() {
+        setSizeScreen((window.innerWidth / 100).toFixed(2));
+    }, false);
+    setSizeScreen((window.innerWidth / 100).toFixed(2));
+  }, []);
 
-      settings.widthScreen()
+  useEffect(() => {
+    changeSlides()
+}, [sizeScreen]);
+
+  function changeSlides() {
+    console.log("CHANGE")
+    console.log(sizeScreen)
+    if(sizeScreen * 100 >= 1350) return setSlidesToShow(5); 
+    if(sizeScreen * 100 < 640) return setSlidesToShow(1) ; 
+    if(sizeScreen * 100 < 768) return setSlidesToShow(2) ; 
+    if(sizeScreen * 100 < 880) return setSlidesToShow(3) ; 
+    if(sizeScreen * 100 < 1100) return setSlidesToShow(4) ; 
+    if(sizeScreen * 100 < 1300) return setSlidesToShow(5); 
+
+  }
 
       return (
           <Box

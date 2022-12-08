@@ -4,13 +4,13 @@ import image1 from '../../images/MetaverseMagna.jpg'
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
-import Tabs from '../custom/Tabs'
+import Tabs from './Tabs'
 
 
 export default function Project() {
     return (
         <>
-            <Paper elevation={5} className="project__container">
+            <Paper elevation={5} className="project__wrap">
                 <div className="project_title">Metaverse Magna</div>
                 <div className="project_container">
                     <div 
